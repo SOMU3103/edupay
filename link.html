@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/link.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-lg-8 col-12 mx-auto text-center">
+                <h1 class="display-6">MAHENDRA GROUPS</h1>
+                <p>Payment Forms</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-12 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- Tab Navigation -->
+                        <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                            <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                <li class="nav-item">
+                                    <a data-toggle="pill" href="#credit-card" class="nav-link active">
+                                        <i class="fas fa-credit-card mr-2"></i> GPay
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="pill" href="#QRcode" class="nav-link">
+                                        <i class="fa fa-qrcode" aria-hidden="true"></i> QR Code
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="pill" href="#net-banking" class="nav-link">
+                                        <i class="fas fa-mobile-alt mr-2"></i> Net Banking
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+                        <!-- GPay Tab -->
+                        <div id="credit-card" class="tab-pane fade show active pt-3">
+                            <div class="container">
+                                <form id="paymentForm" onsubmit="event.preventDefault()">
+                                    <center><h3>Pay with Google Pay</h3></center>
+                                    <p>
+                                        "Paying your fees is easy with Google Pay! No need to wait in lines or fill out long forms. Just a few taps on your phone, and your payment is done safely. It's quick, simple, and secure, so you can focus on what's important!"
+                                    </p>
+                                    <center><div id="gpay-button"></div></center>
+                                </form>
+                            </div>
+
+                            <!-- Google Pay Script -->
+                            <script async
+                                src="https://pay.google.com/gp/p/js/pay.js"
+                                onload="onGooglePayLoaded()">
+                            </script>
+                        </div>
+
+                        <!-- QR Code Tab -->
+                        <div id="QRcode" class="tab-pane fade pt-3">
+                            <center>
+                                <img src="img/QRcode.jpg" alt="QR Code" class="img-fluid">
+                            </center>
+                            <center>
+                               <a href="phone.html"><button style="background-color: #03b435; color: white; font-size: 16px; padding: 10px 20px; border-radius: 8px;">
+                                  GPay
+                                </button></a>
+                              </center>
+                              
+                        </div>
+
+                        <!-- Net Banking Tab -->
+                        <div id="net-banking" class="tab-pane fade pt-3">
+                            <div class="form-group">
+                                <label for="bankSelect">
+                                    <h6>Select your Bank</h6>
+                                </label>
+                                <select class="form-control" id="bankSelect">
+                                    <option value="" selected disabled>--Please select your Bank--</option>
+                                    <option value="https://www.onlinesbi.sbi/">SBI</option>
+                                    <option value="https://www.unionbankonline.co.in/">UNION</option>
+                                    <option value="https://www.bankofbaroda.in/">BANK OF BARODA</option>
+                                    <option value="https://www.hdfcbank.com/">HDFC</option>
+                                    <option value="https://www.axisbank.com/">AXISBANK</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                               <center> <p>
+                                    <button type="button" class="btn btn-primary" id="proceedPayment">
+                                        <i class="fas fa-mobile-alt mr-2"></i> Proceed Payment
+                                    </button>
+                                </p>
+                            </center>
+                            </div>
+                        </div>
+
+                        <p class="text-muted">
+                            Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script/link.js"></script>
+
+    
+</body>
+</html>

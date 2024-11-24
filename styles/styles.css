@@ -1,0 +1,194 @@
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Register page styles */
+.register-photo {
+    background-image: url('images/background.jpg');
+    background: #0e75c9;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container takes full viewport height */
+}
+
+/* Flex container to align form and image */
+.register-photo .form-container {
+    display: flex;
+    flex-direction: row; /* Align items horizontally (image left, form right) */
+    justify-content: center;
+    align-items: stretch; /* Stretch the child elements to the same height */
+    width: 80%; /* Adjust the width of the form-container */
+}
+
+/* Form box styles (right side form) */
+.form-box {
+    flex: 1;
+    max-width: 850px; /* Limit form width */
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 1px; /* Space between form and image */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-photo form {
+    width: 100%;
+    color: #505e6c;
+}
+
+.register-photo form h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.register-photo form .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dfe7f1;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 0px;
+    height: 40px;
+}
+
+.register-photo form .form-check {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.register-photo form .btn-success {
+    background: green;
+    border: none;
+    border-radius: 4px;
+    padding: 11px;
+    box-shadow: none;
+    margin-top: 35px;
+    text-shadow: none;
+    outline: none !important;
+}
+
+.register-photo form .btn-success:hover,
+.register-photo form .btn-success:active {
+    background: green;
+}
+
+.register-photo form .btn-success:active {
+    transform: translateY(1px);
+}
+
+.register-photo form .already {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #6f7a85;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+/* Image holder (left side) */
+.register-photo .image-holder {
+    text-align: center;
+    max-width: 450px; /* Limit the image and text width to match the form */
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text and image horizontally */
+}
+
+.register-photo .image-holder img {
+    max-width: 150px;
+    height: auto;
+}
+
+.register-photo .image-holder p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #7F8C8D;
+    line-height: 1.6;
+    max-width: 350px; /* Limit paragraph width for cleaner layout */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-photo .image-holder h1 {
+    margin-top: 10px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Media Query for devices with screen width less than 991px (tablets and below) */
+@media (max-width: 991px) {
+    .register-photo .form-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-box {
+        margin-left: 0;
+        width: 100%; /* Make form box take full width */
+        max-width: 100%; /* Ensure it doesn't overflow */
+    }
+
+    .image-holder {
+        margin-top: 30px;
+        width: 100%; /* Ensure image holder takes full width */
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    /* Hide the text and heading on mobile */
+    .register-photo .image-holder p,
+    .register-photo .image-holder h1 {
+        display: none;
+    }
+
+    /* Adjust the text size on smaller devices */
+    .register-photo .image-holder img {
+        max-width: 120px; /* Slightly smaller logo on mobile */
+    }
+}
+
+/* Media Query for smaller screens (e.g., mobile phones with width <= 480px) */
+@media (max-width: 480px) {
+    /* Further optimize padding for mobile screens */
+    .register-photo {
+        padding: 40px 10px;
+    }
+
+    /* Make the form elements more mobile-friendly */
+    .register-photo form .form-control {
+        padding: 10px; /* Add padding for better touch targets */
+    }
+
+    /* Adjust button size for smaller screens */
+    .register-photo form .btn-success {
+        padding: 10px; /* Smaller padding for the button */
+    }
+}
+

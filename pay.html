@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment Page</title>
+    <link rel="stylesheet" href="styles/pay.css">
+</head>
+<body>
+    <div class="container">
+        <form id="paymentForm" onsubmit="return false;">
+            <h3 class="title">TRAINING CHALLAN DETAILS</h3>
+            <div class="inputBox">
+                <label for="name">Student Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="inputBox">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter email address" required>
+            </div>
+
+            <div class="inputBox">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter phone number" required pattern="[0-9]{10}">
+            </div>
+
+            <div class="inputBox">
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" name="rollNumber" id="rollNumber" placeholder="Enter roll number" required>
+            </div>
+            <div class="inputBox">
+                <label for="registerNumber">Register Number:</label>
+                <input type="text" name="registernumber" id="registerNumber" placeholder="Register Number" required>
+            </div>
+            <div class="inputBox">
+                <label for="branch">Branch:</label>
+                <input type="text" name="branch" id="branch" placeholder="Branch" required oninput="this.value = this.value.toUpperCase();">
+            </div>
+            <div class="inputBox">
+                <label for="denomination">Amount:</label>
+                <input type="number" name="amount" id="denomination" placeholder="Amount" required>
+            </div>
+            <div class="inputBox">
+                <label for="sumofrupees">Sum of Rupees:</label>
+                <input type="text" name="sumofrupees" id="sumofrupees" placeholder="Sum of Rupees" required oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <div class="inputBox">
+                <label for="fineamount">Fine Amount:</label>
+                <input type="text" name="fineamount" id="fineamount" placeholder="Fine amount/NO" required oninput="this.value = this.value.toUpperCase();">
+            </div>
+
+            <div class="flex">
+                <div class="inputBox">
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div class="inputBox">
+                    <label for="year">Year:</label>
+                    <select id="year" required>
+                        <option value="">Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">Final Year</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="submit_btn">Proceed to Payment</button>
+            
+
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="script/name.js"></script>
+    <script src="script/pay.js"></script>
+    
+</body>
+</html>

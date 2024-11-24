@@ -1,0 +1,148 @@
+body {
+    background: #0e75c9; /* Set the overall background to white */
+}
+
+.rounded {
+    border-radius: 1rem;
+}
+
+.nav-pills .nav-link {
+    color: #555;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff; /* Distinct active tab color */
+    color: white;
+}
+
+.card {
+    background-color: #f9f9f9; /* Slightly off-white card background */
+    border: 1px solid #ddd; /* Subtle border for distinction */
+}
+
+.card-header {
+    background-color: #e9ecef; /* Light gray header for separation */
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    background-color: #fff; /* Pure white for the main container */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h3, h6 {
+    color: #333; /* Consistent dark text for headings */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+body {
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Adjust QR code image size */
+/* Adjust QR code image size */
+.img-fluid {
+    max-width: 200px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* link.css */
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff; /* Pure white for the main container */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better depth */
+    border-radius: 1rem;
+    max-width: 100%; /* Ensures container adjusts to screen size */
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #f9f9f9; /* Slightly off-white card background */
+    border: 1px solid #ddd; /* Subtle border for distinction */
+    border-radius: 1rem;
+}
+
+.card-header {
+    background-color: #e9ecef; /* Light gray header for separation */
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+.nav-pills .nav-link {
+    color: #555;
+    font-size: 1rem;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff; /* Active tab color */
+    color: white;
+}
+
+h3, h6 {
+    color: #333; /* Dark text for headings */
+    font-weight: 600;
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004085;
+}
+
+@media (max-width: 767px) {
+    /* For small screens (mobile) */
+    .container {
+        padding: 2px; /* Reduce padding on mobile */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .card-header {
+        padding: 1rem; /* Better padding on mobile */
+    }
+
+    .nav-pills {
+        font-size: 0.9rem; /* Smaller tab text */
+    }
+}
+
